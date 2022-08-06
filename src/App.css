@@ -1,38 +1,79 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,300&display=swap');
+
+* {
+  font-family: 'Kanit', sans-serif;
+  font-size: 18px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  background-color: rgb(9, 9, 9);
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+h2 {
+  font-size: 30px;
+  margin-left: 45px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  letter-spacing: 2px;
+  color: chocolate;
+  text-indent: -30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Container {
+  top: 56%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  width: 356px;
+  text-align: center;
+  background-image: linear-gradient(to right, rgb(15, 206, 253), rgb(65, 62, 62));
+  border-radius: 5px;
+  border: 1px solid rgb(242, 120, 6);
+  box-shadow: 5px 10px 70px 10px rgb(16, 224, 224);
+}
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(80px, 80px);
+  background-color: black;
+}
+
+input[type="text"] {
+  caret-color: rgb(0, 0, 0);
+  color: chocolate;
+  height: 85px;
+  width: 341px;
+  background-color: rgb(56, 55, 55);
+  /* background-image: linear-gradient(to right,rgb(15, 206, 253),rgb(65, 62, 62)); */
+  text-align: right;
+  font-size: 34px;
+  letter-spacing: 4px;
+  position: relative;
+  padding-inline: 3px 8px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+textarea:focus,
+input[type="text"]:focus,
+.uneditable-input:focus {
+  border-color: rgba(0, 253, 223, 0.8);
+  box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075) inset, 0 0 8px rgba(229, 103, 23, 0.6);
+  outline: 0 none;
+}
+
+input:focus,
+#backspace:focus {
+  border-color: rgba(23, 229, 222, 0.8);
+  box-shadow: inset 10px 20px 108px 100px rgba(0, 0, 0, 0.32);
+}
+
+input[type="button"],
+#backspace {
+  color: chocolate;
+  background-color: rgb(40, 39, 39);
 }
